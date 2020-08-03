@@ -28,4 +28,15 @@ public class BowlingGameTest {
         //then
         assertEquals(45,totalScore);
     }
+
+    @Test
+    void should_get_score_when_appear_all_hit(){
+        //Given
+        int[][]arr_balls = new int[][]{{2, 3}, {10,0}, {2, 4}, {6, 2}, {10,0}, {2, 2}, {5, 4}, {5, 2},{4,6},{2,3}};
+
+        //when
+        int totalScore = bowlingGame.calculateAppearAllHit(arr_balls);
+
+        assertEquals(totalScore,86);
+    }
 }
